@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Page - Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .review-form {
+            margin: 20px 0;
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .review-form button:hover {
+            background-color: #218838;
+        }
+        .reviews {
+            margin: 20px 0;
+        }
+        .review {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .review:last-child {
+            border-bottom: none;
+        }
+        .review h3 {
+            margin: 0;
+            color: #555;
+        }
+        .review p {
+            margin: 5px 0;
+        }
+        .review small {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reviews</h2>
+        
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <form id="reviewForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <textarea id="review" name="review" rows="4" placeholder="Your Review" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+        
+        <div class="reviews">
+            <h3>Reviews</h3>
+            <div id="reviewsList">
+                <!-- Reviews will be displayed here -->
+                <div class="review">
+                    <h3>Jane Doe</h3>
+                    <p>Amazing place! Had a wonderful time with my family.</p>
+                    <small>Posted on: 2024-06-27</small>
+                </div>
+                <div class="review">
+                    <h3>John Smith</h3>
+                    <p>Great experience. The tour guide was very knowledgeable.</p>
+                    <small>Posted on: 2024-06-26</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var review = document.getElementById('review').value;
+            var currentDate = new Date().toISOString().split('T')[0];
+            
+            var reviewHtml = `
+                <div class="review">
+                    <h3>${name}</h3>
+                    <p>${review}</p>
+                    <small>Posted on: ${currentDate}</small>
+                </div>
+            `;
+            
+            document.getElementById('reviewsList').innerHTML += reviewHtml;
+            
+            document.getElementById('reviewForm').reset();
+        });
+    </script>
+</body>
+</html>

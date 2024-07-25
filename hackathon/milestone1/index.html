@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Responsive Website Travel</title>
+
+    <style>
+        .carousel-caption {
+            color: #fff;
+            /* Set the color for all text within the carousel caption */
+        }
+
+        .carousel-caption .home__data-subtitle,
+        .carousel-caption .home__data-title {
+            color: white;
+            /* Accent color for specific text elements, if needed */
+        }
+
+        /* Optional: Style the buttons within the carousel caption */
+        .carousel-caption .btn {
+            background-color: #7b6f6d;
+            /* Button background color */
+            border-color: #7b6f6d;
+            /* Button border color */
+            color: #fff;
+            /* Text color inside the button */
+        }
+
+        .carousel-caption .btn:hover {
+            background-color: #7b6f6d;
+            /* Darker shade for hover effect */
+            border-color: #7b6f6d;
+            /* Border color for hover effect */
+        }
+
+        body {
+            background-color: #f5f5dc;
+            /* Vintage beige background color */
+            color: #333;
+            /* Darker text color for readability */
+            font-family: 'Arial', sans-serif;
+            /* Simple, clean font */
+        }
+
+        .header,
+        .navbar,
+        .footer {
+            background-color: #d8cfc4;
+            /* Soft vintage background color for header and footer */
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            /* Darker text color for nav links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #7b6f6d;
+            /* Slightly darker color on hover */
+        }
+
+        .carousel-item img {
+            filter: sepia(0.3);
+            /* Sepia filter for a vintage photo effect */
+        }
+
+        .home__data-title {
+            color: #6f4f28;
+            /* Vintage brown color for headings */
+        }
+
+        .home__social-link {
+            color: #6f4f28;
+            /* Vintage brown color for social icons */
+        }
+
+        .home__social-link:hover {
+            color: #f5a623;
+            /* Accent color on hover */
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            /* Light border for cards */
+            border-radius: 8px;
+            /* Rounded corners for a vintage feel */
+        }
+
+        .card-title {
+            color: black;
+            /* Vintage brown color for card titles */
+        }
+
+        .section {
+            padding: 80px 0;
+            background-color: #faf3e0;
+            /* Light background color for sections */
+        }
+
+        .footer {
+            background-color: #d8cfc4;
+            /* Matching background color */
+        }
+
+        .footer p {
+            color: white;
+            /* Vintage brown color for footer text */
+        }
+
+        .btn-primary {
+            background-color: #7b6f6d;
+            /* Vintage button color */
+            border-color: #7b6f6d;
+            /* Matching border color */
+        }
+
+        .btn-primary:hover {
+            background-color: #6f4f28;
+            /* Darker vintage button color on hover */
+            border-color: #6f4f28;
+            /* Matching border color on hover */
+        }
+
+        .btn-secondary {
+            background-color: #e0c8b1;
+            /* Vintage beige button color */
+            border-color: #e0c8b1;
+            /* Matching border color */
+        }
+
+        .btn-secondary:hover {
+            background-color: #d8b8a6;
+            /* Slightly darker vintage button color on hover */
+            border-color: #d8b8a6;
+            /* Matching border color on hover */
+        }
+
+        .experience__img {
+            max-width: 80%;
+            max-height: 60%;
+            /* Shorten the size of the images */
+            height: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .home__social-link {
+            color: #ffffff;
+        }
+
+        .place__img {
+            height: 500px;
+            /* Set the desired height */
+            object-fit: cover;
+            /* Ensure the image covers the area */
+            width: 100%;
+            /* Ensure the image takes full width */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar  -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+            <a class="navbar-brand" href="#"><strong>Tourism in Mangalore</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu"
+                aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#place">Places</a>
+                    </li>
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="blog.html">Blogs</a>
+                        <!-- <span class="nav-link" href="">Blogs</span> -->
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Login/Signup</a>
+                    </li>
+                    <li><i class="ri-moon-line" id="theme-toggle"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel  -->
+    <main class="main">
+        <section class="home" id="home">
+            <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#homeCarousel" data-slide-to="1"></li>
+                    <li data-target="#homeCarousel" data-slide-to="2"></li>
+                    <li data-target="#homeCarousel" data-slide-to="3"></li>
+                    <li data-target="#homeCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/home1.jpg" class="d-block w-100" alt="..." height="500" width="1300">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="home__data">
+                                <span class="home__data-subtitle">Discover your place</span>
+                                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Waterfalls</b></h1>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/home2.jpg" class="d-block w-100" alt="..." height="500" width="1300">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="home__data">
+                                <span class="home__data-subtitle">Discover your place</span>
+                                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Islands</b></h1>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/home3.jpg" class="d-block w-100" alt="..." height="500" width="1300">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="home__data">
+                                <span class="home__data-subtitle">Discover your place</span>
+                                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Forests</b></h1>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets\img\kadripark.jpg" class="d-block w-100" alt="..." height="500" width="1300">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="home__data">
+                                <span class="home__data-subtitle">Discover your place</span>
+                                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Parks</b></h1>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets\img\temple.jpg" class="d-block w-100" alt="..." height="500" width="1300">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="home__data">
+                                <span class="home__data-subtitle">Discover your place</span>
+                                <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Temples</b></h1>
+                                <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="section__title about__title">More Information <br> About The Best Places</h2>
+                        <p class="about__description">You can find the most beautiful and pleasant places , you choose
+                            the place we will guide you all the way.</p>
+                        <a href="#" class="btn btn-primary">Book a guide</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets\img\aloy1.jpg" alt="chapel" height="800px"
+                                    class="about__img-one img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="assets\img\beach1.jpg" alt="" class="about__img-two img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discover section" id="discover">
+            <div class="container">
+                <h2 class="section__title text-center">Discover the most <strong>ATTRACTIVE</strong> places</h2><br><br>
+                <div class="row">
+                    <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="card">
+                            <img src="assets\img\varanga.jpg" class="card-img-top discover__img" alt="varanga">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Varanga Jain Temple</h5>
+                                <p class="card-text">Experience the serene temple that stands at the midst of a
+                                    beautiful lake surrounded by water lillies. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. In, minus.
+                                    .</p>
+                                <!-- <p class="card-text">24 tours available</p> -->
+                                <a href="varanga.html" class="btn btn-primary mt-auto">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="card">
+                            <img src="assets\img\kadri3.jpg" class="card-img-top discover__img" alt="Hvar">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Kadri Temple</h5>
+                                <p class="card-text">Discover the historic charm of the Kadri Hill famous for the 11th
+                                    century Kadri Manjunatha Temple dedicated to Lord Shiva.</p>
+                                <!-- <p class="card-text">18 tours available</p> -->
+                                <a href="learn.html" class="btn btn-primary mt-auto">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="card">
+                            <img src="assets\img\Someshwara.jpg" class="card-img-top discover__img" alt="someshwara">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Someshwara beach</h5>
+                                <p class="card-text">Explore the stunning landscapes and beaches of Someshwara. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Esse, ipsa. Lorem ipsum dolor
+                                    sit amet.</p>
+                                <!-- <p class="card-text">15 tours available</p> -->
+                                <a href="someshwara.html" class="btn btn-primary mt-auto">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="card">
+                            <img src="assets\img\sulthan.jpg" class="card-img-top discover__img" alt="Whitehaven">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Sultan Battery</h5>
+                                <p class="card-text">Sultan Battery was built of black stones and constructed to
+                                    obstruct war ships from entering the river which was the major route for English
+                                    invasion.</p>
+                                <!-- <p class="card-text">32 tours available</p> -->
+                                <a href="sulthan.html" class="btn btn-primary mt-auto">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section">
+            <div class="container">
+                <h2 class="section__title text-center">Explore the culture <br>and cuisine of Kudla</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <h2 class="experience__number">20</h2>
+                        <span class="experience__description">Year <br> Experience</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <h2 class="experience__number">75</h2>
+                        <span class="experience__description">Complete <br> tours</span>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                        <h2 class="experience__number">650+</h2>
+                        <span class="experience__description">Tourist <br> Destination</span>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <img src="assets/img/cuisine.jpg" alt="Cuisine" class="experience__img img-fluid">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <img src="assets/img/yakshagana5.jpg" alt="Yakshagana" class="experience__img img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="place section" id="place">
+            <div class="container">
+                <h2 class="section__title text-center">Choose Your Place</h2>
+                <div class="row mt-3">
+                    <div class="col-md-3 mb-3 d-flex">
+                        <div class="card flex-fill">
+                            <img src="assets/img/karinge.jpg" class="card-img-top place__img"
+                                alt="Karinjeshwara Temple">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Karinjeshwara Temple</h5>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <a href="review.html" class="btn btn-secondary">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex">
+                        <div class="card flex-fill">
+                            <img src="assets/img/kudroli.jpeg" class="card-img-top place__img" alt="Kapu Beach">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Kudroli Temple</h5>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <a href="review.html" class="btn btn-secondary">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex">
+                        <div class="card flex-fill">
+                            <img src="./assets/img/kapu.jpeg" class="card-img-top place__img" alt="Kudroli Temple">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Kapu Light House</h5>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <a href="review.html" class="btn btn-secondary">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 d-flex">
+                        <div class="card flex-fill">
+                            <img src="./assets/img/pilikula.jpg" class="card-img-top place__img"
+                                alt="Pilikula Biological Park">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pilikula Biological Park</h5>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <a href="review.html" class="btn btn-secondary">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer  -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="home__social d-flex justify-content-center mb-3">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link mx-2 text-white">
+                            <i class="ri-facebook-box-fill ri-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link mx-2 text-white">
+                            <i class="ri-instagram-fill ri-2x"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank"
+                            class="home__social-link mx-2 text-white">
+                            <i class="ri-whatsapp-fill ri-2x"></i>
+                        </a>
+                    </div>
+                    <p>&copy; Copyright ESB 2024. <br> Tourism in Mangalore. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
